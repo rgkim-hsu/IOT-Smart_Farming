@@ -17,6 +17,8 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - name: Create dummy binaries dir
+        run: mkdir -p dummy-classes
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
